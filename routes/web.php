@@ -24,6 +24,9 @@ Route::get('/dashboard', function () {
 
 require __DIR__.'/auth.php';
 
-Route::get('/notes', [NoteController::class, 'index']);
-Route::post('/notes', [NoteController::class, 'store'])->middleware('auth');
-Route::get('/notes/{note}', [NoteController::class, 'show']);
+Route::middleware('auth')->group(function () {
+    Route::get('/notes', [NoteController::class, 'index'])->name('notes');
+    Route::get('/notes/create', [NoteController::class, 'create'])->name('notes.create');
+    Route::post('/notes', [NoteController::class, 'store']);
+    Route::get('/notes/{note}', [NoteController::class, 'show']);
+});

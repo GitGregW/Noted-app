@@ -14,4 +14,8 @@ class Note extends Model
     public function path(){
         return "/notes/{$this->id}";
     }
+
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
 }
