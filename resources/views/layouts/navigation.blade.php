@@ -19,8 +19,8 @@
             </div>
 
             <!-- Logo -->
-            <div class="shrink-0 flex items-end">
-                <a href="{{ route('notes') }}" style="margin-top: auto;">
+            <div class="shrink-0 flex items-end" style="border-bottom: 2px #92E5FF solid;min-width: 10em;">
+                <a href="{{ route('notes') }}" style="margin: auto auto 0;">
                     <x-application-logo class="text-white" style="font-size: 1.563rem" />
                 </a>
             </div>

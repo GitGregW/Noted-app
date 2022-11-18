@@ -1,6 +1,6 @@
 <x-app-layout>
     @section('content')
-    <div style="padding:3em 4em;background: linear-gradient(271.89deg, #E8E8E8 0%, #FFFFFF 47.92%, #E8E8E8 94.79%);">
+    <div style="padding:3em 4em;min-height: 100vh;background: linear-gradient(271.89deg, #E8E8E8 0%, #FFFFFF 47.92%, #E8E8E8 94.79%);">
         <div style="display: flex;padding: 0.3em 1em;border-left: 3px #FF006B solid;">
             <h1 style="font-size:21px;margin-right: auto;">Folder 1 HARDCODED</h1>
             <svg class="feather" style="height: 24px;width: 24px;stroke: black;fill: none;stroke-width: 2px;margin: auto 0;">
