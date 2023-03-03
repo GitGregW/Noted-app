@@ -14,12 +14,14 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('notes', function (Blueprint $table) {
+        Schema::create('tasks', function (Blueprint $table) {
             $table->id();
             $table->foreignIdFor(User::class)->onDelete('cascade');
-            $table->unsignedInteger('folder_id')->nullable();
-            $table->string('title');
-            $table->text('description');
+            $table->unsignedInteger('folder_id');
+            // $table->unsignedInteger('note_id');
+            $table->string('body');
+            $table->boolean('completed')->default(0);
+            $table->DateTime('due_date')->nullable();
             $table->timestamps();
         });
     }
@@ -31,6 +33,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('notes');
+        Schema::dropIfExists('tasks');
     }
 };

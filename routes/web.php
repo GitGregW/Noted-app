@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\NoteController;
+use App\Http\Controllers\FolderController;
+use App\Http\Controllers\FolderNoteController;
+use App\Http\Controllers\FolderTaskController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,8 +27,17 @@ Route::get('/dashboard', function () {
 require __DIR__.'/auth.php';
 
 Route::middleware('auth')->group(function () {
-    Route::get('/notes', [NoteController::class, 'index'])->name('notes');
-    Route::get('/notes/create', [NoteController::class, 'create'])->name('notes.create');
-    Route::post('/notes', [NoteController::class, 'store']);
-    Route::get('/notes/{note}', [NoteController::class, 'show']);
+    Route::resource('folders', FolderController::class)->scoped(['folder' => 'slug'])->except(['destroy']);
+
+    Route::get('/folders/{folder:slug}/notes/create', [FolderNoteController::class, 'create']);
+    Route::post('/folders/{folder:slug}/notes', [FolderNoteController::class, 'store']);
+    Route::get('/folders/{folder:slug}/notes/{note}/edit', [FolderNoteController::class, 'edit'])->name('notes.edit');
+    Route::patch('/folders/{folder:slug}/notes/{note}', [FolderNoteController::class, 'update']);
+
+    Route::get('/folders/{folder:slug}/tasks/create', [FolderTaskController::class, 'create']);
+    Route::post('/folders/{folder:slug}/tasks', [FolderTaskController::class, 'store']);
+    Route::get('/folders/{folder:slug}/tasks/{task}/edit', [FolderTaskController::class, 'edit'])->name('tasks.edit');
+    Route::patch('/folders/{folder:slug}/tasks/{task}', [FolderTaskController::class, 'update']);
+    // Below, refactor to VueJS
+    Route::post('/folders/{folder:slug}/tasks/{task}/complete', [FolderTaskController::class, 'complete']);
 });

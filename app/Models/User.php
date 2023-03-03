@@ -45,4 +45,12 @@ class User extends Authenticatable
     public function notes(){
         return $this->hasMany(Note::class);
     }
+
+    public function tasks(){
+        return $this->hasMany(Task::class);
+    }
+
+    public function folders(){
+        return $this->hasMany(Folder::class);
+    }
 }

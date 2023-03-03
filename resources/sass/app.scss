@@ -4,5 +4,21 @@
 // Variables
 @import 'variables';
 
-// Bootstrap
-@import 'bootstrap/scss/bootstrap';
+// Form
+@import 'form';
+
+svg.feather{
+    height: 24px;
+    width: 24px;
+    stroke: #F5F5F5;
+    fill: none;
+    stroke-width: 2px;
+    margin: auto 0;
+    display:inline-block;
+}
+
+div.section__background{
+    padding:1em 3em;
+    min-height: 100vh;
+    background: linear-gradient(90deg, #FFFFFF -53.09%, #969798 9.67%, #969798 89.45%, #FFFFFF 157.64%);
+}

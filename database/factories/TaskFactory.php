@@ -2,22 +2,20 @@
 
 namespace Database\Factories;
 
+use Illuminate\Database\Eloquent\Factories\Factory;
 use App\Models\User;
 use App\Models\Folder;
-use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Note>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Task>
  */
-class NoteFactory extends Factory
+class TaskFactory extends Factory
 {
     /**
      * Define the model's default state.
      *
      * @return array<string, mixed>
      */
-    // protected $model = Note::class;
-
     public function definition()
     {
         return [
@@ -27,8 +25,8 @@ class NoteFactory extends Factory
             'folder_id' => function(){
                 return Folder::factory()->create()->id;
             },
-            'title' => $this->faker->words(3, true),
-            'description' => $this->faker->paragraph
+            'body' => $this->faker->sentence,
+            'due_date' => $this->faker->dateTimeBetween('1 day', '+2 week')
         ];
     }
 }

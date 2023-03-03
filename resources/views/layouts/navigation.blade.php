@@ -3,12 +3,6 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16">
             <div class="flex">
-                <!-- Note Add -->
-                <a href="{{ route('notes.create') }}" style="margin: auto 0;">
-                    <svg class="feather" style="height: 24px;width: 24px;stroke: white;fill: none;stroke-width: 2px;">
-                        <use href="/icons/feather-sprite.svg#edit"/>
-                    </svg>
-                </a>
 
                 <!-- Navigation Links -->
                 {{-- <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
@@ -20,7 +14,7 @@
 
             <!-- Logo -->
             <div class="shrink-0 flex items-end" style="border-bottom: 2px #92E5FF solid;min-width: 10em;">
-                <a href="{{ route('notes') }}" style="margin: auto auto 0;">
+                <a href="/folders" style="margin: auto auto 0;">
                     <x-application-logo class="text-white" style="font-size: 1.563rem" />
                 </a>
             </div>

@@ -1,0 +1,96 @@
+
+.input__wrapper{
+    position: relative;
+    margin: 0 1em;
+}
+
+.textarea__wrapper{
+    position: relative;
+    margin: 1.5em 0;
+}
+
+.button__wrapper{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+button.primary{
+    color: white;
+    font-size:0.8rem;
+    font-weight: bold;
+    background: linear-gradient(360deg, #889CAE -38.75%, rgba(146, 229, 255, 0) 232.5%);
+    border: 0.5px solid #FFFFFF;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 0.5em;
+    padding: 0.75em;
+}
+
+button.muted{
+    color: white;
+    font-size:0.8rem;
+    font-weight: bold;
+    background: linear-gradient(360deg, #FF1F00 -38.75%, rgba(166, 187, 228, 0.182292) 232.47%, #FF006B 232.5%);
+    border: 0.5px solid #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 0.5em;
+    padding: 0.75em;
+}
+
+.form__container{
+    margin-bottom: 1rem;
+    display:flex;
+    justify-content: space-between;
+}
+
+form.noted__form{
+    width:100%;
+    min-height:18em;
+    margin:1em 0;
+    padding:1em 1.5em;
+    background: #494949;
+    border: 1px solid #889CAE;
+    border-radius: 5px;
+}
+
+form.noted__form{
+    input{
+        color: white;
+        font-size: 1.4rem;
+        background: none;
+        border: none;
+        border-bottom: 1px #D1D1D1 solid;
+        padding-left: 3em;
+    }
+    
+    label{
+        color: #D1D1D1;
+        font-size: 0.8rem;
+    }
+
+    textarea{
+        width:100%;
+        color: white;
+        font-size: 1.2rem;
+        background: none;
+        border: 1px #D1D1D1 solid;
+        padding: 0.8em;
+        padding-left: 0.25em;
+    }
+}
+
+.textarea__label{
+    color: #D1D1D1;
+    font-size: 0.8rem;
+}
+
+.form__link{
+    margin:auto 0;
+    color: #F5F5F5;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.form__validation{
+    font-size:0.8em;
+    color: red;
+}

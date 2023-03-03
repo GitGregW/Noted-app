@@ -9,7 +9,7 @@
         <style>
             @media only screen and (min-width: 850px) {
                 div.background{
-                    height: 45rem;
+                    height: 32em;
                 }
             }
             body {
@@ -18,10 +18,15 @@
             *{
                 box-sizing: border-box;
             }
+            .background{
+                height:22em;
+                background: linear-gradient(180deg, #889CAE 10%, rgba(136, 156, 174, 0) 100%), url(/images/dose-media-bU6JyhSI6zo-unsplash.jpg) bottom;
+                background-size: cover;background-position: 0% 88%;
+            }
         </style>
     </head>
     <body style="margin:0;">
-        <div style="height:22em;background: linear-gradient(180deg, #889CAE 10%, rgba(136, 156, 174, 0) 100%), url(/images/dose-media-bU6JyhSI6zo-unsplash.jpg) bottom; background-size: cover">
+        <div class="background">
             <div style="display: flex;justify-content: space-between;padding: 1em 0">
                 <span></span>
                 <div class="shrink-0 flex items-end" style="border-bottom: 2px #92E5FF solid;min-width: 10em;">
@@ -34,7 +39,7 @@
                     </button>
                 </div>
             </div>
-            <p style="color:white;margin: 3em 6em;text-align: justify;">
+            <p style="color:white;margin: 3em 6em;text-align: justify;max-width: 30em;">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 Aliquam eleifend mi in nulla posuere sollicitudin aliquam.
                 Risus nullam eget felis eget.
