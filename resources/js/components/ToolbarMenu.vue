@@ -2,7 +2,7 @@
 export default {
     props: {
         folderNames: {
-            type:String,
+            type: String,
             default: ""
         },
         icon: String,
@@ -35,7 +35,8 @@ export default {
     <div class="toolbar__trigger" style="height: 24px;">
         <button @click="this.isOpen = !this.isOpen" class="toolbar__button">
             <svg class="feather" style="height: 24px;width: 24px;stroke: white;fill: none;stroke-width: 2px;">
-                <use :href="iconPath"/>
+                <title>{{ this.theToolType }}</title>
+                <use :href="asset(iconPath)"/>
             </svg>
         </button>
     </div>

@@ -10,7 +10,8 @@
         <toolbar-menu-component icon="check-circle" folder-names="{{$folder_names}}"></toolbar-menu-component>
         <form-modal-component type="Folder">
             <svg class="feather" style="height: 24px;width: 24px;stroke: white;fill: none;stroke-width: 2px;">
-                <use href="/icons/feather-sprite.svg#folder-plus"/>
+                <title>Folder</title>
+                <use href="{{ asset('/icons/feather-sprite.svg#folder-plus') }}"/>
             </svg>
         </form-modal-component>
     </toolbar-component>
@@ -22,7 +23,7 @@
         @forelse ($folders as $folder)
             <div class="folder">
                 <svg class="folder__dropdown">
-                    <use href="/icons/feather-sprite.svg#chevron-down"/>
+                    <use href="{{ asset('/icons/feather-sprite.svg#chevron-down') }}"/>
                 </svg>
                 <a href="{{ $folder->path() }}" class="folder__header">
                     <h1>{{ $folder->name }}</h1>
@@ -64,7 +65,7 @@
                                 </form>
                                 <a href="#" style="padding: 0.5em;margin: auto 0;">
                                     <svg class="task__item__actions">
-                                        <use href="/icons/feather-sprite.svg#more-vertical"/>
+                                        <use href="{{ asset('/icons/feather-sprite.svg#more-vertical') }}"/>
                                     </svg>
                                 </a>
                             </div>

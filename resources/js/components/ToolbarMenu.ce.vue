@@ -37,6 +37,7 @@ export default {
             <svg class="feather" style="height: 24px;width: 24px;stroke: white;fill: none;stroke-width: 2px;">
                 <use :href="iconPath"/>
             </svg>
+            <span>{{this.type}}</span>
         </button>
     </div>
     <div v-show="isOpen" class="toolbar__dropdown">
