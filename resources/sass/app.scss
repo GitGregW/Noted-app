@@ -6,6 +6,85 @@
 
 // Form
 @import 'form';
+@import 'modal';
+@import 'dropdown';
+
+// App css
+@import 'folders';
+@import 'tasks';
+@import 'notes';
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    div.content{
+        padding: 1.5em 0.5em;
+        min-height: 100vh;
+        background: linear-gradient(271.89deg, #E8E8E8 0%, #FFFFFF 47.92%, #E8E8E8 94.79%);    
+    }
+    div.navigation{
+        grid-template-columns: 15% 70% 15%;
+        padding: 0 0.5em;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    div.content{
+        padding: 3em 4em;
+        min-height: 100vh;
+        background: linear-gradient(271.89deg, #E8E8E8 0%, #FFFFFF 47.92%, #E8E8E8 94.79%);    
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    
+}
+
+.navigation{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    height: 4em;
+    justify-content: space-between;
+    align-content: center;
+    padding: 0 2em;
+}
+
+.toolbar{
+    display: flex;
+    justify-content: center;
+    gap: 4em;
+}
+
+.back{
+    margin: 1em 0;
+}
+
+.back__icon{
+    height: 24px;
+    width: 24px;
+    stroke: #889CAE;
+    fill: none;
+    stroke-width: 2px;
+    margin: auto 0;
+    display: inline-block;
+}
+
+.back__body{
+    color: #889CAE;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
 
 svg.feather{
     height: 24px;
@@ -21,4 +100,8 @@ div.section__background{
     padding:1em 3em;
     min-height: 100vh;
     background: linear-gradient(90deg, #FFFFFF -53.09%, #969798 9.67%, #969798 89.45%, #FFFFFF 157.64%);
+}
+
+.test__container{
+    background-color: black;
 }

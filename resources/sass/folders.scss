@@ -1,0 +1,76 @@
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    div.folder__item{
+        display: block;    
+    }
+    div.folder__background{
+        padding: 0;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    div.folder__item{
+        display: flex;   
+    }
+    div.folder__background{
+        padding: 0.3em;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    // div.folder{
+    //     grid-template-columns: 40% auto;
+    // }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    div.folder__background{
+        padding: 2.5em 4em;
+    }
+}
+
+.folder__background{
+    min-height: 100vh;
+    background: linear-gradient(271.89deg, #E8E8E8 0%, #FFFFFF 47.92%, #E8E8E8 94.79%);
+}
+
+.folder{
+    display: grid;
+    grid-template-columns: min-content auto;
+    gap: 0.5em 1em;
+    margin: 1em 0;
+    width: fit-content;
+}
+
+.folder__dropdown{
+    height: 24px;
+    width: 24px;
+    stroke: black;
+    fill: none;
+    stroke-width: 2px;
+    margin: auto 0;
+}
+
+.folder__header{
+    font-size: 21px;
+}
+
+.folder__item{
+    gap: 0 1.5em;
+    padding: 0.3em 1em;
+    border-left: 3px #ffa2c9 solid;
+    margin-left: 0.7em;
+}
+
+.folder__item--show{
+    padding: 0.3em 1em;
+    border-left: 3px #ffa2c9 solid;
+    margin: 0.5em 0;
+}

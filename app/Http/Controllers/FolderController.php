@@ -17,13 +17,17 @@ class FolderController extends Controller
     }
 
     public function store(Request $request){
-        $attributes = request()->validate([
+        $folder = request()->validate([
             'name' => 'required'
         ]);
-        $attributes['user_id'] = Auth::user()->id;
-        $attributes['slug'] = '';
+        $folder['user_id'] = Auth::user()->id;
+        $folder['slug'] = '';
 
-        Auth::user()->folders()->create($attributes);
+        if($request->wantsJson()){
+            return ['message' => $folder->path()];
+        }
+
+        Auth::user()->folders()->create($folder);
 
         return redirect('/folders');
     }

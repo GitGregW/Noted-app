@@ -1,0 +1,65 @@
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    div.tasks{
+        width: 100%;
+    }
+}
+
+.tasks{
+    background-color: white;
+    border-radius: 0.5em;
+    padding: 1em 1em;
+    height: fit-content;
+    width: fit-content;
+}
+
+.task__header{
+    font-size: 16px;
+    font-weight: bold;
+    padding-left: 1em;
+    padding-bottom: 0.5em;
+}
+
+.task{
+    border-top: 1px #D1D1D1 solid;
+    margin-top: 0.5em;
+}
+
+.task__item__date{
+    color: #FF006B;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.task__item{
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    gap: 0.5em;
+}
+
+.task__item__complete{
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    fill: none;
+    stroke-width: 2px;
+    margin: auto 0;
+}
+
+.task__item__description{
+    display: inline;
+    padding-left: 0.5em;
+    font-size: 16px;
+    line-height: 1em;
+    text-align: initial;
+}
+
+.task__item__actions{
+    height: 18px;
+    width: 18px;
+    stroke: #D1D1D1;
+    fill: none;
+    stroke-width: 2px;
+}

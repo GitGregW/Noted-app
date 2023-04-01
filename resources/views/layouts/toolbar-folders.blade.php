@@ -1,5 +1,8 @@
 <nav x-data="{ open: false }" style="background-color: #889CAE;position: sticky;top: 0;padding: 0.5em 1em;">
-    <div style="display:flex;gap: 2em;">
+    <div class="toolbar">
+        {{-- <div>
+            <a href="" @click.prevent="$modal.show('hello-world')">Show Modal</a>
+        </div> --}}
         <div style="height: 24px;">
             <x-dropdown align="left" width="48">
                 <x-slot name="trigger" style="height: 24px;">
@@ -15,6 +18,12 @@
                             {{ $folder_name }}
                         </x-dropdown-link>
                     @endforeach
+                    <div id="app2">
+                        <x-dropdown-link @click.prevent="show = true">
+                            <form-modal-component></form-modal-component>
+                        </x-dropdown-link>
+                    </div>
+                    
                 </x-slot>
             </x-dropdown>
         </div>

@@ -1,0 +1,71 @@
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    div.notes{
+        display: block;
+        width: 100%;
+        margin-top: 1em;
+    }
+    div.note{
+        margin: 0.5em 0;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    div.notes{
+        width: auto;
+    }
+    div.note{
+        width: 18em;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    div.notes{
+        min-width: 34em;
+    }
+    div.note--show{
+        width: 36em;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    
+}
+
+.notes{
+    display: flex;
+    gap: 0.5em;
+    flex-wrap: wrap;
+    width: min-content;
+    margin-top: -0.5em;
+}
+
+.note{
+    background-color: white;
+    padding: 0.5em 0.5em;
+    font-size: 14px;
+    min-width: 18em;
+}
+
+.note__header{
+    font-weight: bold;
+    font-size: 18px;
+    margin-right: 1em;
+}
+
+.note__timestamp{
+    font-size: 0.8rem;
+    color: #969798;
+    margin-left: auto;
+    margin-top: 0.8rem;
+    width: fit-content;
+    text-align: right;
+}

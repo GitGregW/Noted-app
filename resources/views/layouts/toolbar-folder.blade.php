@@ -1,6 +1,6 @@
 
 <nav x-data="{ open: false }" style="background-color: #889CAE;position: sticky;top: 0;padding: 0.5em 1em;">
-    <div style="display:flex;gap: 2em;">
+    <div class="toolbar toolbar--folder">
         @if (request()->routeIs('folders.index'))
             {{-- List folder names --}}
         @endif

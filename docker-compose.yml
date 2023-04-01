@@ -24,10 +24,10 @@ services:
             - sail
         depends_on:
             - mysql
-            - redis
-            - meilisearch
-            - mailhog
-            - selenium
+            # - redis
+            # - meilisearch
+            # - mailhog
+            # - selenium
     mysql:
         image: 'mysql/mysql-server:8.0'
         tmpfs:

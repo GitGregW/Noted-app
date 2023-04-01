@@ -1,26 +1,27 @@
 <nav x-data="{ open: false }" class="border-b border-gray-100" style="background-color: #889CAE;">
     <!-- Primary Navigation Menu -->
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between h-16">
-            <div class="flex">
+    <div>
+        <div class="navigation">
+            {{-- <div class="flex">
 
                 <!-- Navigation Links -->
-                {{-- <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-nav-link :href="route('notes')" :active="request()->routeIs('notes')">
                         {{ __('Notes') }}
                     </x-nav-link>
-                </div> --}}
-            </div>
+                </div>
+            </div> --}}
 
+            <div></div>
             <!-- Logo -->
-            <div class="shrink-0 flex items-end" style="border-bottom: 2px #92E5FF solid;min-width: 10em;">
-                <a href="/folders" style="margin: auto auto 0;">
+            <div style="border-bottom: 2px #92E5FF solid;width: 10em;height: inherit;text-align: center;padding: 1em 0;margin: 0 auto;">
+                <a href="/folders">
                     <x-application-logo class="text-white" style="font-size: 1.563rem" />
                 </a>
             </div>
 
             <!-- Settings Dropdown -->
-            <div class="hidden sm:flex sm:items-center sm:ml-6">
+            <div style="margin-left: auto;" class="hidden sm:flex sm:items-center sm:ml-6">
                 <x-dropdown align="right" width="48">
                     <x-slot name="trigger">
                         <button class="flex items-center text-sm font-medium text-white hover:text-white hover:border-gray-300 focus:outline-none focus:text-white focus:border-gray-300 transition duration-150 ease-in-out">
@@ -50,7 +51,7 @@
             </div>
 
             <!-- Hamburger -->
-            <div class="-mr-2 flex items-center sm:hidden">
+            <div style="margin-left: auto;" class="-mr-2 flex items-center sm:hidden">
                 <button @click="open = ! open" class="inline-flex items-center justify-center p-2 rounded-md text-white hover:text-white hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-white transition duration-150 ease-in-out">
                     <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
                         <path :class="{'hidden': open, 'inline-flex': ! open }" class="inline-flex" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
